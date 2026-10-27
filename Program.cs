@@ -5,24 +5,26 @@ namespace c1
     {
         static void Main()
         {
-           int number = int.Parse(Console.ReadLine());
-            if (number >= 10 && number <= 20)
+            int number = int.Parse(Console.ReadLine());
+            switch (number)
             {
-                Console.WriteLine("Число в диапазоне!");
+                case 1:
+                Console.WriteLine("Привет!");
+                break;
+                
+                case 2:
+                Console.WriteLine("Пока!");
+                break;
+        
+                case 3:
+                Console.WriteLine("я изучаю C#");
+                break;
+                
+                default:
+                Console.WriteLine("неизвестная команда");
+                break;
             }
-            else
-            {
-                Console.WriteLine("Число не в диапазоне!");
-            }
-            bool isBlocked = false;
-            if (!isBlocked)
-            {
-                Console.WriteLine("Доступ разрешен!");
-            }
-            else
-            {
-                Console.WriteLine("Доступ запрещен!");
-            }
+
         }
     }
 }
