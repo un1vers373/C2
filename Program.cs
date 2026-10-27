@@ -5,22 +5,23 @@ namespace c1
     {
         static void Main()
         {
-            Console.WriteLine("Введите первое число: ");
-            int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Введите второе число: ");
-            int b = int.Parse(Console.ReadLine());
-
-            if (a > b)
+           int number = int.Parse(Console.ReadLine());
+            if (number >= 10 && number <= 20)
             {
-                Console.WriteLine("Первое число больше второго!");
+                Console.WriteLine("Число в диапазоне!");
             }
-            else if (a == b)
+            else
             {
-                Console.WriteLine("Оба числа равны!");
+                Console.WriteLine("Число не в диапазоне!");
             }
-            else 
+            bool isBlocked = false;
+            if (!isBlocked)
             {
-                Console.WriteLine("ой, косяк попробуйте снова :(");
+                Console.WriteLine("Доступ разрешен!");
+            }
+            else
+            {
+                Console.WriteLine("Доступ запрещен!");
             }
         }
     }
