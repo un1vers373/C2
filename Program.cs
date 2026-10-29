@@ -5,26 +5,25 @@ namespace c1
     {
         static void Main()
         {
-            int number = int.Parse(Console.ReadLine());
-            switch (number)
-            {
-                case 1:
-                Console.WriteLine("Привет!");
-                break;
-                
-                case 2:
-                Console.WriteLine("Пока!");
-                break;
-        
-                case 3:
-                Console.WriteLine("я изучаю C#");
-                break;
-                
-                default:
-                Console.WriteLine("неизвестная команда");
-                break;
-            }
+            Console.WriteLine("Введите первое число: ");
+int number = int.Parse(Console.ReadLine());
 
+Console.WriteLine("Введите второе число: ");
+int number1 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Сложение: " + (number + number1));
+Console.WriteLine("Вычитание: " + (number - number1));
+Console.WriteLine("Умножение: " + (number * number1));
+
+if (number1 != 0)
+{
+    Console.WriteLine("Деление: " + ((double)number / number1));
+    Console.WriteLine("Остаток от деления: " + (number % number1));
+}
+else
+{
+    Console.WriteLine("На ноль делить нельзя!");
+}
         }
     }
 }
